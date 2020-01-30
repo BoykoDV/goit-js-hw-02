@@ -26,7 +26,8 @@ console.log(
 );
 // вернется форматированная строка*/
 
-const formatString = function(string) {
+/* first option */
+/* const formatString = function(string) {
   const characterArray = string.split("");
   const Array = [];
   if (characterArray.length > 41) {
@@ -35,7 +36,15 @@ const formatString = function(string) {
     return characterArray.join("");
   }
   return string;
+}; */
+
+/* second option */
+const formatString = function(string) {
+  const newString =
+    string.length < 41 ? string : string.substring(0, 40) + "...";
+  return newString;
 };
+
 console.log(formatString("Curabitur ligula sapien, tincidunt non."));
 // вернется оригинальная строка
 

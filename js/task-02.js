@@ -31,13 +31,21 @@ console.log(
 ); // 120
 */
 
-const calculateEngravingPrice = function(message, pricePerWord) {
+/* first option */
+
+/* const calculateEngravingPrice = function(message, pricePerWord) {
   const wordsArray = message.split(" ");
   let total = 0;
   for (let i = 0; i < wordsArray.length; i += 1) {
     total += 1;
   }
   return total * pricePerWord;
+}; */
+
+/* second option */
+const calculateEngravingPrice = function(message, pricePerWord) {
+  const wordsArray = message.split(" ");
+  return wordsArray.length * pricePerWord;
 };
 
 console.log(
