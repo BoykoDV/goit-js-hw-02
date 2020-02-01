@@ -40,8 +40,7 @@ console.log(checkForSpam('[SPAM] How to earn fast money?')); // true */
 const checkForSpam = function(message) {
   console.log(message);
   message = message.toLowerCase();
-  const result =
-    message.includes("spam") || message.includes("sale") ? true : false;
+  const result = message.includes("spam") || message.includes("sale");
   return result;
 };
 

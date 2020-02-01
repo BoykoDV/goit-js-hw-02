@@ -57,16 +57,13 @@ const isLoginValid = function(allLogins, login) {
 };
 
 const isLoginUnique = function(allLogins, login) {
-  for (const allLogin of allLogins) {
-    if (login === allLogin) {
-      return false;
-    }
+  if (allLogins.includes(login)) {
+    return false;
   }
   return true;
 };
 
-  const addLogin = function(allLogins, login) {
-    
+const addLogin = function(allLogins, login) {
   if (!isLoginValid(allLogins, login)) {
     console.log(`Ошибка! Логин должен быть от 4 до 16 символов`);
     return;
@@ -82,11 +79,9 @@ const isLoginUnique = function(allLogins, login) {
     console.log("Логин успешно добавлен!");
     return;
   }
-
 };
 
 console.log(addLogin(allLogins, "Ajax")); // 'Логин успешно добавлен!'
 console.log(addLogin(allLogins, "robotGoogles")); // 'Такой логин уже используется!'
 console.log(addLogin(allLogins, "Zod")); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 console.log(addLogin(allLogins, "jqueryisextremelyfast")); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-

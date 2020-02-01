@@ -42,19 +42,16 @@ const numbers = [];
 while (true) {
   let input = prompt("Введи число");
   console.log(numbers);
-
-  if (input !== null) {
-    numbers.push(input);
-  } else {
-    if (numbers.length !== 0) {
-      for (const number of numbers) {
-        total += Number(number);
-      }
-      alert(`Общая сумма ${total}`);
-      break;
-    } else {
-      alert(`Не ввели ни одного числа!`);
-      break;
-    }
-  }
+      if (input !== null) { numbers.push(input);}
+      else { break;}
 }
+
+if (numbers.length !== 0) {
+  for (const number of numbers) {
+    total += Number(number);
+  }
+  alert(`Общая сумма ${total}`);
+  }
+else {
+    alert(`Не ввели ни одного числа!`);
+  }
